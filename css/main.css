@@ -42,6 +42,7 @@ html, body, .Container
 .LeftContent
 {
     background-color: purple;
+    width: 200px
     overflow: auto;
 }
 

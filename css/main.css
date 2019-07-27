@@ -43,6 +43,7 @@ html, body, .Container
 {
     background-color: purple;
     width: 200px
+    vertical-align: middle
     overflow: auto;
 }
 

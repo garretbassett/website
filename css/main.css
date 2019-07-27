@@ -7,6 +7,8 @@
 html, body, .Container
 {
     height: 100%;
+    font-family: "Roboto Mono", "Arial", sans-serif;
+    font-size: 24px;
 }
 
     .Container:before
@@ -15,6 +17,15 @@ html, body, .Container
         height: 100%;
         float: left;
     }
+
+#Container a:hover span {
+   display: block;
+   position: absolute;
+   top: 800px;
+   left: 200px;
+   z-index: 10;
+   color: black;
+}
 
 .Content
 {
@@ -26,6 +37,7 @@ html, body, .Container
         content: '';
         clear: both;
         display: block;
+
     }
 
 .Wrapper
@@ -34,23 +46,103 @@ html, body, .Container
     width: 100%;
     height: 100%;
 }
-    .Wrapper > div
-    {
-        height: 100%;
-    }
 
 .LeftContent
 {
-    background-color: purple;
-    width: 200px
-    vertical-align: middle
-    overflow: auto;
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    font-size: 72px;
+    width: 400px;
+    height: 500px;
+    text-align: right;
+    float:left;
 }
 
 .RightContent
 {
-    background-color: #E0FFFF;
-    float: left;
-    margin-left: 10px;
-    margin-right: 10px;
+    position: absolute;
+    top: 20%;
+    right: 15%;
+    width: 40%;
+    height: 500px;
+    text-align: right;
 }
+
+/*img{
+    display: none
+}*/
+
+a img {
+	display:block;
+	border:none;
+}
+.outer {
+	width:760px;
+	margin:auto;
+	padding:10px 10px 20px;
+	position:relative;/* stacking context*/
+}
+ul.links {
+	list-style:none;
+	margin:0 20px;
+	padding:0;
+	border-bottom:none;
+	width:100px;
+  text-align: right;
+}
+.links li {
+	width:100px;
+	color:black;
+  text-align: right;
+}
+.links li a {
+	display:block;
+	width:90px;
+	padding:5px;
+	color:black;
+	text-decoration:none;
+}
+.links li a span {
+	position:fixed;
+	margin-left:400px;
+	top:-999em;
+	width:300px;
+	height:300px;
+	z-index:2;
+  border-style: solid;
+  border-width: 2px;
+}
+.links li a span img {
+	display:block;
+	margin:0 0 5px
+  visibility: hidden;
+  border-style: solid;
+  border-width: 2px;
+}
+.links li a:hover {
+	color:white;
+	visibility:visible;
+}
+.links li a:hover span {
+	top:50%;
+	margin-top:-250px;
+  border-style: solid;
+  border-width: 2px;
+}
+h1 {
+	text-align:center;
+	margin:1em 0;
+}
+
+p.one:hover + img{
+    display: block;
+}
+
+p.two:hover img{
+    display: block;
+}
+
+.hover_img a { position:relative; }
+.hover_img a span { position:absolute; display:none; z-index:99; }
+.hover_img a:hover span { display:block; }
